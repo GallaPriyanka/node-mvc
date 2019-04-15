@@ -32,6 +32,9 @@ const app = express()
 dotenv.config({ path: '.env' })
 LOG.info('Environment variables loaded into process.env.')
 
+// get our port or Heroku port or default
+const port = process.env.PORT || 8089;
+
 // Are we in production or development?
 const isProduction = process.env.NODE_ENV === 'production'
 LOG.info(`Environment isProduction = ${isProduction}`)
@@ -107,7 +110,7 @@ connection.once('open', function () {
 })
 
 // configure app.settings.............................
-app.set('port', process.env.PORT)
+app.set('port', port)
 app.set('host', process.env.HOST)
 
 // set the root view folder
@@ -140,11 +143,10 @@ LOG.info('Loaded routing.')
 app.use((req, res) => { res.status(404).render('404.ejs') }) // handle page not found errors
 
 // call app.listen to start server
-const port = app.get('port')
 const host = app.get('host')
 const env = app.get('env')
 
-app.listen(port, host, () => {
+app.listen(port, () => {
   console.log(`\nApp running at http://${host}:${port}/ in ${env} mode`)
   console.log('Press CTRL-C to stop\n')
 })
