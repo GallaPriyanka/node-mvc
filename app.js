@@ -32,8 +32,9 @@ const app = express()
 dotenv.config({ path: '.env' })
 LOG.info('Environment variables loaded into process.env.')
 
-// get our port or Heroku port or default
-const port = process.env.PORT || 8089;
+// log port (Heroku issue)
+const port = process.env.PORT || 8089
+LOG.info(`Running on ${port}`)
 
 // Are we in production or development?
 const isProduction = process.env.NODE_ENV === 'production'
@@ -79,7 +80,7 @@ function seed(collectionName) {
       if (!err && count === 0) { c.insertMany(require('./data/' + collectionName + '.json')) }
     })
     c.find({}).toArray((err, data) => {
-       console.log(data) 
+       //console.log(data) 
     })
   })
 }
@@ -110,7 +111,6 @@ connection.once('open', function () {
 })
 
 // configure app.settings.............................
-app.set('port', port)
 app.set('host', process.env.HOST)
 
 // set the root view folder
@@ -146,7 +146,7 @@ app.use((req, res) => { res.status(404).render('404.ejs') }) // handle page not 
 const host = app.get('host')
 const env = app.get('env')
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8089, () => {
   console.log(`\nApp running at http://${host}:${port}/ in ${env} mode`)
   console.log('Press CTRL-C to stop\n')
 })
