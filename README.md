@@ -10,7 +10,6 @@ A sample starter app using:
 - Lodash for JavaScript object iteration and manipulation
 - jQuery library for DOM manipulation
 - BootStrap Material Design framework for responsive design
-- nedb In-memory database
 - Winston logger
 
 ## Links
@@ -25,6 +24,14 @@ Following must be downloaded, installed, and configured according to the product
 1. Git version control system
 1. If Windows, TortoiseGit
 1. Add "Open PowerShell Here as Administrator" to context menu. Download and run file from <https://github.com/profcase/open-command-window-here-as-admin>.
+
+## Development Environment
+
+1. Install and run MongoDB locally - see <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/>
+
+## Production Environment
+
+1. Set up MongoDB in the cloud - see <https://www.mongodb.com/cloud/atlas>
 
 ## Code Editor
 

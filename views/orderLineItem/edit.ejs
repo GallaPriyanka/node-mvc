@@ -4,13 +4,13 @@
   <div class=row>
     <div class="col col-md-12">
 
-      <h2>Edit orderLineItem </h2>
+      <h2>Edit orderlineitem </h2>
 
       <div class="content">
-        <form method="POST" action="/orderLineItem/save/<%= orderLineItem._id %>">
+        <form method="POST" action="/orderlineitem/save/<%= orderlineitem._id %>">
           <div class="form-group" id=frm>
             <label for="_id">ID</label>
-            <input type="number" class="form-control" id="_id" name="_id" value="<%= orderLineItem._id %>" required
+            <input type="number" class="form-control" id="_id" name="_id" value="<%= orderlineitem._id %>" required
               disabled>
           </div>
 
@@ -20,7 +20,7 @@
           <input type="submit" value="Save" class="btn btn-primary" />
         </form>
 
-        <form method="get" action="/orderLineItem">
+        <form method="get" action="/orderlineitem">
           <input type="submit" value="Return to list" class="btn btn-caution" />
         </form>
 

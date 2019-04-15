@@ -1,6 +1,6 @@
 {
   "name": "node-express-mvc-ejs-bootstrap-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node Express MVC EJS Bootstrap Starter app",
   "main": "app.js",
   "repository": {
@@ -23,12 +23,8 @@
     "express-ejs-layouts": "latest",
     "express-status-monitor": "latest",
     "express-validator": "latest",
-    "lodash": "latest",
-    "lodash.find": "latest",
-    "lodash.findindex": "latest",
-    "lodash.remove": "latest",
+    "mongodb": "^3.2.3",
     "mongoose": "latest",
-    "nedb": "latest",
     "request": "latest",
     "serve-favicon": "latest",
     "winston": "latest"

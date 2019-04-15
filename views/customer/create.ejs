@@ -8,11 +8,14 @@
       <br>
       <% 
       maxID=0; 
-      for (var i=0; i < customers.query.length; i++) {
-        if(customers.query[i]._id > maxID) { 
-          maxID=customers.query[i]._id;  
+      for (var i=0; i < customers.length; i++) {
+        if(customers[i]._id > maxID) { 
+          maxID=customers[i]._id;  
         }
       }
+      const customer = {}
+      customer._id = maxID+1
+     
       %>
       <div class="content">
         <div>

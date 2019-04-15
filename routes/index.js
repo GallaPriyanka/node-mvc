@@ -20,12 +20,12 @@ router.get('/', (req, res, next) => {
 })
 
 // Defer path requests to a particular controller
+// Route orderLineItem first - or requests will be handled by order...
 router.use('/about', require('../controllers/about.js'))
 router.use('/customer', require('../controllers/customer.js'))
+router.use('/orderlineitem', require('../controllers/orderlineitem.js'))
 router.use('/order', require('../controllers/order.js'))
-router.use('/orderLineItem', require('../controllers/orderLineItem.js'))
 router.use('/product', require('../controllers/product.js'))
-router.use('/puppy', require('../controllers/puppy.js'))
 
 LOG.debug('END routing')
 module.exports = router
