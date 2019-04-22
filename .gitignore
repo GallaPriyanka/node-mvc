@@ -3,7 +3,6 @@ node_modules
 .vscode
 /.vscode
 
-
 lib-cov
 *.seed
 *.log
@@ -24,6 +23,10 @@ tmp
 # Dependency directory
 node_modules
 bower_components
+
+# Generated artifacts
+coverage
+logs
 
 # Editors
 .idea
