@@ -15,6 +15,7 @@
     "array-flatten": "latest",
     "async": "latest",
     "body-parser": "latest",
+    "chai": "^4.2.0",
     "consolidate": "latest",
     "dotenv": "latest",
     "ejs": "latest",
@@ -23,6 +24,8 @@
     "express-ejs-layouts": "latest",
     "express-status-monitor": "latest",
     "express-validator": "latest",
+    "mocha": "^6.1.4",
+    "mochai": "^0.2.5",
     "mongodb": "^3.2.3",
     "mongoose": "latest",
     "request": "latest",
@@ -41,6 +44,5 @@
     "start": "node app.js",
     "test": "jasmine-node spec",
     "test-cover": "istanbul cover --include-all-sources ./spec/app.spec.js && istanbul check-coverage"
-
   }
 }
